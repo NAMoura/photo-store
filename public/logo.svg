@@ -1,11 +1,25 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 512 512" xml:space="preserve">
-<path style="fill:#464655;" d="M191.194,148.304h129.614l-58.319-91.782c-3.014-4.743-9.962-4.743-12.975,0L191.194,148.304z"/>
-<path style="fill:#EFF2FA;" d="M510.799,447.304l-41.908-65.953H43.11L1.202,447.304c-3.234,5.089,0.439,11.731,6.488,11.731h496.62
-	C510.359,459.035,514.033,452.393,510.799,447.304z"/>
-<polygon style="fill:#D7DEED;" points="43.11,381.352 468.891,381.352 419.529,303.668 92.471,303.668 "/>
-<polygon style="fill:#C7CFE2;" points="92.471,303.668 419.529,303.668 370.168,225.987 141.832,225.987 "/>
-<polygon style="fill:#AFB9D2;" points="141.832,225.987 370.168,225.987 320.808,148.304 191.194,148.304 "/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021.5 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="183.538mm" height="183.538mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 17386.5 17386.5"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#0C4A6E}
+    .fil1 {fill:#FEFEFE;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0" cx="8693.25" cy="8693.25" r="8693.25"/>
+  <g id="_2171553334992">
+   <path class="fil1" d="M10457.43 13031.59l-3528.39 0 1587.57 2498.52c82.05,129.11 271.19,129.11 353.21,0l1587.61 -2498.52z"/>
+   <path class="fil1" d="M1757.05 4892.12l1140.83 1795.39 11590.73 0.01 1140.83 -1795.4c88.04,-138.54 -11.95,-319.34 -176.61,-319.34l-13519.13 0c-164.66,0 -264.67,180.81 -176.64,319.34z"/>
+   <polygon class="fil1" points="13144.89,8802.23 4241.63,8802.23 5585.35,10916.87 11801.17,10916.87 "/>
+  </g>
+ </g>
 </svg>

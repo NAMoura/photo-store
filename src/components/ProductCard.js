@@ -43,7 +43,7 @@ export default function ProductCard({ product, index }) {
               {formatCurrencyString({ value: product.price, currency: "EUR" })}
             </p>
           </div>
-          <button onClick={onAddToCart} className="border rounded-lg py-1 px-4">Add to cart</button>
+          <button onClick={onAddToCart} className="border rounded-lg py-1 px-4  border-lime-500 py-2 px-6 bg-lime-500 hover:bg-lime-600 hover:border-lime-600 focus:ring-4 focus:ring-opacity-50 focus:ring-lime-500 text-white disabled:opacity-50 disabled:cursor-not-allowed rounded">Add to cart</button>
         </div>
       </div>
     </Link>
