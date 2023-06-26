@@ -1,10 +1,36 @@
+import axios from "axios";
 import Link from "next/link";
+import { useState } from "react";
 import CartProduct from "src/components/CartProduct";
 import { useShoppingCart } from "use-shopping-cart";
+import { useRouter } from "next/router";
 
 export default function CartPage() {
-  const { cartCount, clearCart, formattedTotalPrice, cartDetails } = useShoppingCart();
-  console.log(cartDetails)
+  const { cartCount, clearCart, formattedTotalPrice, cartDetails } =
+    useShoppingCart();
+  const [isRedirecting, setRedirecting] = useState(false);
+  const router = useRouter();
+
+  async function onCheckOut() {
+    if (cartCount > 0) {
+      try {
+        setRedirecting(true);
+        const session = await axios
+          .post("/api/checkout-sessions", cartDetails)
+          .then((res) => res.data);
+
+        const result = router.push(session.url);
+        if (result?.error) {
+          console.log("Error in result: ", result);
+        }
+      } catch (error) {
+        console.log("Error: ", error);
+      } finally {
+        setRedirecting(false);
+      }
+    }
+  }
+
   return (
     <div className="container xl:max-w-screen-xl mx-auto py-12 px-6">
       {cartCount > 0 ? (
@@ -36,17 +62,21 @@ export default function CartPage() {
 
       {cartCount > 0 && (
         <div className="mt-12 space-y-4">
-            {Object.entries(cartDetails).map(([key, product]) => (
-                <CartProduct key={product.Id} product={product}/>
-            ))}
+          {Object.entries(cartDetails).map(([key, product]) => (
+            <CartProduct key={product.Id} product={product} />
+          ))}
 
           <div className="flex flex-col items-end border-t py-4 mt-8">
             <p className="text-xl">
               Total:{" "}
               <span className="font-semibold">{formattedTotalPrice}</span>
             </p>
-            <button className="border rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 mt-4 max-w-max">
-              Go to Checkout
+            <button
+              disabled={isRedirecting}
+              onClick={onCheckOut}
+              className="border rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 mt-4 max-w-max"
+            >
+              {isRedirecting ? "Redirecting..." : "Go to Checkout"}
             </button>
           </div>
         </div>

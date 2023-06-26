@@ -6,10 +6,12 @@ import {
   XCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { useShoppingCart } from "use-shopping-cart";
 
 export default function CartProduct({ product }) {
+    const { setItemQuantity, removeItem } = useShoppingCart()
   return (
-    <div className="flex flex-col md:flex-row  justify-between space-x-3 hover:shadow-lg hover:border-opacity-50 border border-opacity-0 rounded-md p-4 bg-white">
+    <div className="flex flex-col md:flex-row justify-between space-x-3 hover:shadow-lg hover:border-opacity-50 border border-opacity-0 rounded-md p-4 bg-white">
       <Link
         href={`/products/${product.id}`}
         className="flex items-center space-x-3 group"
@@ -22,29 +24,31 @@ export default function CartProduct({ product }) {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <p className="font-semibold text-lg group-hover:underline">
+        <p className="font-semibold text-md group-hover:underline">
           {product.name}
         </p>
       </Link>
 
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <div className="flex items-center space-x-3">
           <button
             disabled={product.quantity <= 1}
+            onClick={() => setItemQuantity(product.id, product.quantity -1)}
             className="p-1 rounded-md hover:bg-rose-100 hover:text-rose-500"
           >
             <MinusSmallIcon className="w-6 h-6 flex-shrink-0" />
           </button>
           <p className="font-semibold text-xl">{product.quantity}</p>
-          <button className="p-1 rounded-md hover:bg-green-100 hover:text-green-500">
-            <PlusSmallIcon className="w-6 h-6 flex-shrink-0" />
+          <button className="p-1 rounded-md hover:bg-green-100 hover:text-green-500"
+          onClick={() => setItemQuantity(product.id, product.quantity +1)}>
+            <PlusSmallIcon className="w-6 h-6 flex-shrink-0"/>
           </button>
         </div>
-        <p className="font-semibold text-xl ml-10">
+        <p className="font-semibold text-md ml-10">
           <XMarkIcon className="hidden w-4 h-4 text-gray-500 sm:inline-flex mr-4 mb-1" />
           {product.formattedPrice}
         </p>
-        <button className="ml-4 hover:text-red-500">
+        <button onClick={() => removeItem(product.id)} className="ml-4 hover:text-red-500">
           <XCircleIcon className="w-6 h-6 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity"/>
         </button>
         
