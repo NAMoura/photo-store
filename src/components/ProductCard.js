@@ -18,7 +18,7 @@ export default function ProductCard({ product, index }) {
   return (
     <Link
       href={`/products/${product.id}`}
-      className="border-2 rounded-md group overflow-hidden"
+      className="border-2 rounded-md group overflow-hidden hover:shadow-lg"
     >
       <div className="relative w-full h-64">
         <Image

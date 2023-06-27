@@ -10,6 +10,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 export default function ProductPage({ product }) {
+    console.log(product);
 
     const [count, setCount] = useState(1);
     const { addItem } = useShoppingCart();
@@ -68,6 +69,9 @@ export default function ProductPage({ product }) {
           </button>
         </div>
       </div>
+      <div className="mt-10 p-10 flex justify-center text-center border border-opacicy-50 rounded-md shadow-lg bg-white">
+        <p className="text-gray-500">{product.description}</p>
+      </div>
     </div>
   );
 }
@@ -98,6 +102,7 @@ export async function getStaticProps({ params }) {
       name: product.name,
       price: price.unit_amount,
       image: product.images[0],
+      description: product.description
     };
   });
   const product = products.find((product) => product.id === params.id);

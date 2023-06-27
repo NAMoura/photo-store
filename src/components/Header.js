@@ -8,7 +8,7 @@ export default function Header() {
  const { formattedTotalPrice, cartCount }= useShoppingCart()
 
     return (
-        <header className="sticky top-0 bg-white z-10 shadow">
+        <header className="sticky top-0 z-10 shadow bg-gradient-to-t from-[#ffffff] to-[#e7e7e7]">
             <div className="container mx-auto p-6 flex justify-between">
                 <Logo/>
                 <Link href="/cart"

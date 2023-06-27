@@ -2,7 +2,7 @@ import ProductCard from "src/components/ProductCard";
 import { stripe } from "src/utils/stripe";
 
 export default function Home({ products }) {
-  console.log(products.index)
+  console.log(products)
   
   return (
   <div className="container xl:max-w-screen-xl mx-auto py-12 px-6">
@@ -30,6 +30,7 @@ export async function getStaticProps() {
       name: product.name,
       price: price.unit_amount,
       image: product.images[0],
+      description: product.description
     };
   });
 
