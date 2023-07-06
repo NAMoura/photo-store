@@ -1,38 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Photo Store
 
-## Getting Started
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,tailwind,js,html,css,ps" />
+  </a>
+</p>
 
-First, run the development server:
+I am pleased to share the completion of a significant project I've been working on. This project is a web store developed using React, and it has been an incredible learning journey for me.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+One of my main objectives was to learn and implement Tailwind CSS, and I'm happy to say that this web store demonstrates some of the power and versatility of Tailwind in creating responsive designs. It's also connected with Stripe, providing a secure and convenient payment experience for customers.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+During the development process, I had the chence to work with libraries such as react-hot-toast, use-shopping-cart, hero-icons, and axios. These libraries greatly enhanced the user experience and simplified the development workflow.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Of course, building this project wasn't without its challenges. I spent countless hours watching tutorials, debugging minor issues, and finding solutions for deprecated methods. It was a test of my problem-solving skills and persistence.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Despite the challenges, I found immense joy and fulfillment in working on this project. It reinforced my realization of how much more there is to learn and explore in the world of web development.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Feel free to check out the web store. I'd love to hear your thoughts. Your support and feedback mean the world to me as I keep growing.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Website developed by: 
+- [Nuno Moura](https://www.linkedin.com/in/namoura/)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation
+No installation needed. Feel free to visit over [here](https://photo-store-iota.vercel.app).
